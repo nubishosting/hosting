@@ -49,7 +49,7 @@ class CollectdataController extends Controller
         //error_log($dbpwd);
        
 
-       exec("sudo Registerscript.sh $name $domain $plan $mail $dbpwd");
+       exec("Registerscript.sh $name $domain $plan $mail $dbpwd");
 
         $new_db = \DB::statement("CREATE DATABASE $dbname");
         \DB::statement("CREATE USER $name@'localhost' IDENTIFIED BY '$dbpwd' ");
@@ -59,7 +59,7 @@ class CollectdataController extends Controller
         $user = Auth::user();
 
 
-        if ( $plan=='SINGLE'    )
+        if ( $plan=='SINGLE' )
             {
             $rinvplan = app('rinvex.subscriptions.plan')->where('slug','single')->first();
             }elseif ( $plan=='BASIC' ){

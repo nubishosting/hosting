@@ -14,23 +14,23 @@ filetocreated="$userDir$username.ext4"
 #setting quota
 if [ $plan = "SINGLE" ]
 then 
-quota=52427
+quota=52427000
 
 elif [ $plan = "PREMIUM" ]
 then
-quota=157286
+quota=157286000
 
 else
-quota=104856
+quota=104856000
 
 fi
 
-`umount "$absolute_doc_root"`
+sudo `umount "$absolute_doc_root"`
 
-`e2fsck -f "$filetocreated"`
+sudo `e2fsck -f "$filetocreated"`
 
-`resize2fs -p "$filetocreated" "$quota"`
+sudo `resize2fs -p "$filetocreated" "$quota"`
 
-`mount -o loop,rw,usrquota,grpquota "$filetocreated" "$absolute_doc_root"`
+sudo `mount -o loop,rw,usrquota,grpquota "$filetocreated" "$absolute_doc_root"`
 
 exit 0

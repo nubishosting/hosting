@@ -24,12 +24,7 @@ use Illuminate\Support\Facades\Auth;
 class PaypalChangePaymentController extends Controller
 {
     public function index(){
-        /* $nuname = Auth::user()->name;
-        $plan = request('plan');
-        $stuff = \App\Stuff::firstOrCreate(
-            ['username' => $nuname],
-            ['plan'=> $plan],
-        ); */
+
         $plan = request('plan');
         $nuname = Auth::user()->name;
         $stuff = \App\Stuff::where('username', $nuname)->first();

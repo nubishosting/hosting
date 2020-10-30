@@ -78,23 +78,23 @@
                  
                     @auth
 			            @if (auth()->user()->id == 1)
-                        <li style="float: right; background-color: deepskyblue; border-radius: 10px;"><a href="{{ url('/adminhome') }}">Admin</a></li>
+                        <li style="float: right; background-color:#DB0073; border-radius: 10px;"><a href="{{ url('/adminhome') }}">Admin</a></li>
 			            @else
-			            <li style="float: right; background-color: deepskyblue; border-radius: 10px;"><a href="{{ url('/home') }}">Home</a></li>
+			            <li style="float: right; background-color: #DB0073; border-radius: 10px;"><a href="{{ url('/home') }}">Home</a></li>
 			            @endif
                         @else
-                        <li style="float: right; background-color: deepskyblue; border-radius: 10px;"> <a href="{{ route('login') }}">Login</a></li>
+                        <li style="float: right; background-color: #DB0073; border-radius: 10px;"> <a href="{{ route('login') }}">Login</a></li>
 			            
                     @endauth
                 
 
-                <li style="float: left; background-color:  	deepskyblue; ">
+                <li style="float: left; background-color:  #2E006C; ">
                 <a href="{{ url('/') }}">   Homepage |  </a></li>
-                <li style="float: left; background-color: blue; ">
+                <li style="float: left; background-color:#FF007F; ">
                 <a href="{{ url('/apropos') }}">  About us |  </a></li>
-                <li style="float: left; background-color:  	deepskyblue; ">
+                <li style="float: left; background-color:  	#2E006C; ">
                 <a href="{{ url('/domaine') }}"> Domain | </a></li>
-                <li style="float: left; background-color: blue; ">
+                <li style="float: left; background-color: #FF007F; ">
                 <a href="{{ url('/tarif') }}">  Pricing |  </a></li>
                 </ul>
     </div>

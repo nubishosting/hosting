@@ -251,14 +251,7 @@ h1::before {
     <body id="loading"  style="background-image: url('{{ asset('images/prereg.png')}}'); 
                                 background-size: cover;
                             height:100%;">
-        <div class="top-right links" style="">
-            <ul>    
-                <li><a href="{{ url('/') }}"> | Homepage </a></li>
-                <li><a href="{{ url('/apropos') }}" style="background-color: deepskyblue;"> | About us </a></li>
-                <li><a href="{{ url('/domaine') }}"> | Domain</a></li>
-                <li><a href="{{ url('/tarif') }}" style="background-color: deepskyblue;"> | Pricing</a></li>
-                </ul>
-        </div>
+        
         <div class="content">
         <div style="margin-right: 1rem;
                     margin-top:2rem;

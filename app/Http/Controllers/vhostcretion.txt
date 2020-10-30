@@ -1,0 +1,18 @@
+echo "
+		<VirtualHost *:80>
+			ServerAdmin $email
+			ServerName $domain
+			ServerAlias "www.$domain"
+			DocumentRoot $absolute_doc_root
+			<Directory />
+				AllowOverride All
+			</Directory>
+			<Directory $absolute_doc_root>
+				Options Indexes FollowSymLinks MultiViews
+				AllowOverride all
+				Require all granted
+			</Directory>
+			ErrorLog /var/log/apache2/$domain-error.log
+			LogLevel error
+			CustomLog /var/log/apache2/$domain-access.log combined
+		</VirtualHost>" > "$vhosts_path$domain.conf"

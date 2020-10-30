@@ -28,17 +28,10 @@ class SubscriptionManagerController extends Controller
             $size = "150M";
         }
 
-        $op1 = shell_exec("sudo showquota.sh $user");
+        $op1 = shell_exec("showquota.sh $user");
         $op2 = explode("/", $op1);
         $op3 = $op2[0];
         $espace_used = trim($op3);
-        /* $op2 = explode("grace", $op1);
-        $op3 = $op2[0];
-        $op4 = explode(" ", $op3);
-        $espace_used = $op4[37];
-        $soft_limit = $op4[41];
-        $hard_limit = $op4[45]; */
-
         return view('subscriptionmanager')->with('plan', $plan)->with('renewal', $renewal)
         ->with('domainname', $domain)->with('size', $size)->with('espace_used', $espace_used);
     }

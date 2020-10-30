@@ -750,7 +750,7 @@ box-shadow: 5px 5px 15px 5px #000000; padding-bottom:1rem; -webkit-border-radius
 -moz-border-radius: 50px 50px 50px 50px;
 border-radius: 50px 50px 50px 50px;" > 
 				<img src="images/support.png"  alt="" style="width:80%; margin-left:1rem; margin-top:1.5rem;">  
-				<a class="favorite styled" href="login" style="font-size:1rem; margin-top:1rem;"> Support</a>
+				<a class="favorite styled" href="support" style="font-size:1rem; margin-top:1rem;"> Support</a>
 				<center>We will always be there for you.</center>
 			</div>
 
@@ -786,16 +786,10 @@ border-radius: 50px 50px 50px 50px;" >
 		</div>
 		
 		
-		<!--<div class=""style="margin-top:2rem;">
-		<a href="" ><img src="images/paypal.png" alt="" style="width:5%; "></a>
-		<a href="" ><img src="images/logo-mvola.png" alt="" style="width:5%; "></a>
-		<a href="" ><img src="images/airtellogo.jpg" alt="" style="width:5%; "></a>
-		<a href="" ><img src="images/orange-money.jpg" alt="" style="width:5%; "></a>
-		</div>-->
-
+		
 		<div class="row justify-content-center col-md" style="display: inline;" >
 		<center>&copy Nubis Hosting</center>
-		<center><a href="{{ asset('/confidentiality.pdf') }}">Confidentiality policies</a> - 
+		<center><a href="{{ asset('/policies.pdf') }}">Confidentiality policies</a> - 
 				<a href="{{ asset('/terms.pdf') }}">Terms and conditions of use</a></center>
 		</div> 
 		

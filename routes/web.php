@@ -36,10 +36,10 @@ Route::get('/phpmyadmin', function()
 });
 
 
-Route::get('domainreg', function()
+/* Route::get('/domainreg', function()
 {
     return view('domainreg');
-});
+}); */
 
 Route::get('uni', function()
 {
@@ -96,6 +96,13 @@ Route::get('premiumrenew', function()
     return view('premiumrenew');
 });
 
+
+Route::get('support', function()
+{
+    return view('support');
+});
+
+
 Route::get('basicrenew', function()
 {
     return view('basicrenew');
@@ -134,7 +141,7 @@ Route::post('/paypalsuccess', 'PaypalSuccessController@redir');
 Route::post('/dns', 'DnsController@redir');
 Route::post('/redirfromdnstocodt', 'CollectdataController@index');
 Route::post('/redirfromdnstohome', 'HomeController@index');
-//
+
 
 
 

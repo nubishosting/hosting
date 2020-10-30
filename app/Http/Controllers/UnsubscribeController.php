@@ -23,7 +23,7 @@ class UnsubscribeController extends Controller
         $udmn = $user->domain;
         $udbn = $user->dbname;
 
-        exec("sudo delete.sh $uname $udmn");
+        exec("delete.sh $uname $udmn");
 
         \DB::statement("DROP DATABASE $udbn");
         \DB::statement("DROP USER $usr@'localhost'");

@@ -15,18 +15,18 @@ absolute_doc_root=$userDir$username
 filetocreated="$userDir$username.ext4"
 
 # unmount FS
-`umount "$absolute_doc_root"`
+sudo `umount "$absolute_doc_root"`
 
 # delete directory
-`rm -r "$absolute_doc_root/"`
+sudo `rm -r "$absolute_doc_root/"`
 
-a2dissite $domain
+#sudo a2dissite $domain
 
 # delete vhost
-rm "$vhosts_path$domain.conf"
+#sudo rm "$vhosts_path$domain.conf"
 
 # delete FL
-rm "$filetocreated"
+sudo `rm "$filetocreated"`
 
 # restart apache
 

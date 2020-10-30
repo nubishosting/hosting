@@ -13,7 +13,7 @@ class PaypalChangeSuccessController extends Controller
         $stuff = \App\Stuff::where('username', $user)->first();
         $plan = $stuff->plan;
 
-        exec("sudo changesubscription.sh $user $plan");
+        exec("changesubscription.sh $user $plan");
         return view ('paypalchangesuccess');
     }
 }

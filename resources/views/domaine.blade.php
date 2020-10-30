@@ -415,27 +415,27 @@ border: 0;
             ">   
  		@auth
 		@if (auth()->user()->id == 1)
-            <li style="float: right; background-color: deepskyblue; border-radius: 10px;"><a href="{{ url('/adminhome') }}">Admin</a></li>
+            <li style="float: right; background-color:#FFCB60; border-radius: 10px;"><a href="{{ url('/adminhome') }}">Admin</a></li>
 		@else
-			<li style="float: right; background-color: deepskyblue; border-radius: 10px;"><a href="{{ url('/home') }}">Home</a></li>
+			<li style="float: right; background-color: #FFCB60; border-radius: 10px;"><a href="{{ url('/home') }}">Home</a></li>
 		@endif
         @else
-            <li style="float: right; background-color: deepskyblue; border-radius: 10px;"> <a href="{{ route('login') }}">Login</a></li>
+            <li style="float: right; background-color: #FFCB60; border-radius: 10px;"> <a href="{{ route('login') }}">Login</a></li>
 		@endauth
 
-            <li style="float: left; background-color: deepskyblue; ">
+            <li style="float: left; background-color: #5A5E6B; ">
             	<a href="{{ url('/') }}">   Homepage |  
 				</a>
 			</li>
-            <li style="float: left; background-color: blue; ">
+            <li style="float: left; background-color: #FFD700; ">
                 <a href="{{ url('/apropos') }}">  About us |  
 				</a>
 			</li>
-            <li style="float: left; background-color: deepskyblue; ">
+            <li style="float: left; background-color: #5A5E6B; ">
                 <a href="{{ url('/domaine') }}"> Domain | 
 				</a>
 			</li>
-            <li style="float: left; background-color: blue; ">
+            <li style="float: left; background-color:#FFD700; ">
                 <a href="{{ url('/tarif') }}">  Pricing |  
 				</a>
 			</li>
@@ -453,7 +453,7 @@ border: 0;
 				<h2>CHECK A DOMAIN <h2>
 			</div>
 			<div class="domain-form-warp" style="padding-left:270px; margin-top:-2rem;">
-				<form class="domain-search-form" action="/domainreg" method="POST">
+				<form class="domain-search-form" action="domainreg" method="POST">
                 @csrf
                 <input type="text" style="width:400px;" id="dns" name="domain" placeholder="Enter a domain name and check if it's still avalaible" pattern="[a-z0-9.-]+\.[a-z]{2,}$" required>
 					<button type="submit" class="favorite styled" style="opacity:0.8;">

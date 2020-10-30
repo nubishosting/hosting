@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class HomeController extends Controller
 {
@@ -24,6 +26,14 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $userid = Auth::user()->id;
+        $endingsub = app('rinvex.subscriptions.plan_subscription')->findEndingPeriod(3)->where('user_id', $userid)->get();
+        //dd($endingsub);
+        if ($endingsub->isEmpty()) {
+            return view('home');
+        } else {
+            alert()->info('You subscription is about to end','Please check your "Manage your subscription section" to see your exact end date.');
+            return view('home');
+        }
     }
 }
